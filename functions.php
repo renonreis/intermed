@@ -50,7 +50,7 @@ if ( ! function_exists( 'intermed_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'intermed' ),
+				'header-menu' => esc_html__( 'Header Menu', 'intermed' )
 			)
 		);
 
@@ -140,9 +140,12 @@ add_action( 'widgets_init', 'intermed_widgets_init' );
  * Enqueue scripts and styles.
  */
 function intermed_scripts() {
+	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'intermed-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'intermed-style', 'rtl', 'replace' );
 
+	wp_enqueue_script( 'bootstrap-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'intermed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -178,3 +181,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Remove Admin Welcome
+ */
+remove_action('welcome_panel', 'wp_welcome_panel');
+
+/**
+ * Remove Admin Bar Front
+ */
+show_admin_bar(false);
+
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
