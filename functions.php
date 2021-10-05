@@ -175,21 +175,16 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Functions Admin.
+ */
+require get_template_directory() . '/inc/admin.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-/**
- * Remove Admin Welcome
- */
-remove_action('welcome_panel', 'wp_welcome_panel');
-
-/**
- * Remove Admin Bar Front
- */
-show_admin_bar(false);
 
 /**
  * Register Custom Navigation Walker
