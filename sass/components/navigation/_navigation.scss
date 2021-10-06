@@ -1,7 +1,131 @@
 header {
-  .navbar {
+  background-color: $color__background-body;
+  .menu-header {
+    min-height: 84px;
+    width: 100%;
+  }
+
+  .custom-logo-link {
+    svg {
+      width: 100%;
+    }
+  }
+
+  nav {
+    background-color: $color__background-body;
     ul {
       margin: 0;
+    }
+  }
+
+  .navbar-expand-lg {
+    .navbar-nav {
+      li:last-child {
+        .nav-link {
+          background-color: $color__link;
+          border-radius: 50px;
+          color: $white;
+          padding: 0.5rem 3rem;
+
+          &:hover {
+            background-color: $color__link-hover;
+          }
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-link {
+  color: $color__link;
+  &:active {
+    color: $color__link-hover;
+  }
+  &:focus {
+    color: $color__link-hover;
+  }
+}
+
+.offcanvas {
+  .nav-link {
+    text-align: left;
+  }
+}
+
+.navbar-expand-lg {
+  .navbar-nav {
+    margin: 0;
+    .nav-link {
+      color: $color__link;
+      margin: 0 1rem;
+      padding: 0.5rem 0rem;
+      position: relative;
+      @media screen and (min-width: 1400) {
+        font-size: 20px;
+      }
+
+      &:before {
+        content: "";
+        background-color: $color__link-hover;
+        bottom: -20px;
+        display: block;
+        height: 4px;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.3s;
+        width: 100%;
+      }
+      &:hover {
+        color: $color__link-hover;
+        &:before {
+          opacity: 1;
+        }
+      }
+      &:focus {
+        color: $color__link-hover;
+      }
+    }
+    .active {
+      .nav-link {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-item {
+  &:active {
+    background-color: $color__link-hover;
+  }
+}
+
+footer {
+  background-color: $dark-green;
+  padding: 50px 0;
+  color: $white;
+  @media screen and (min-width: 1400px) {
+    font-size: 20px;
+  }
+  a {
+    color: $white;
+  }
+  p:last-child {
+    margin: 0;
+  }
+  .navbar-expand-lg {
+    .navbar-nav {
+      .nav-link {
+        color: $white;
+        &:hover {
+          color: $black;
+        }
+      }
     }
   }
 }

@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -388,7 +389,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -457,7 +458,11 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #ffffff;
+}
+
+.site {
+	padding-top: 100px;
 }
 
 hr {
@@ -518,15 +523,16 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #258649;
+	transition: all 0.3s;
 }
 
 a:visited {
-	color: #800080;
+	color: #258649;
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #1d6237;
 }
 
 a:focus {
@@ -626,8 +632,133 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
-header .navbar ul {
+header {
+	background-color: #fff;
+}
+
+header .menu-header {
+	min-height: 84px;
+	width: 100%;
+}
+
+header .custom-logo-link svg {
+	width: 100%;
+}
+
+header nav {
+	background-color: #fff;
+}
+
+header nav ul {
 	margin: 0;
+}
+
+header .navbar-expand-lg .navbar-nav li:last-child .nav-link {
+	background-color: #258649;
+	border-radius: 50px;
+	color: #ffffff;
+	padding: 0.5rem 3rem;
+}
+
+header .navbar-expand-lg .navbar-nav li:last-child .nav-link:hover {
+	background-color: #1d6237;
+}
+
+header .navbar-expand-lg .navbar-nav li:last-child .nav-link:before {
+	display: none;
+}
+
+.nav-link {
+	color: #258649;
+}
+
+.nav-link:active {
+	color: #1d6237;
+}
+
+.nav-link:focus {
+	color: #1d6237;
+}
+
+.offcanvas .nav-link {
+	text-align: left;
+}
+
+.navbar-expand-lg .navbar-nav {
+	margin: 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	color: #258649;
+	margin: 0 1rem;
+	padding: 0.5rem 0rem;
+	position: relative;
+}
+
+@media screen and (min-width: 1400) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		font-size: 20px;
+	}
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:before {
+	content: "";
+	background-color: #1d6237;
+	bottom: -20px;
+	display: block;
+	height: 4px;
+	opacity: 0;
+	position: absolute;
+	transition: all 0.3s;
+	width: 100%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+	color: #1d6237;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover:before {
+	opacity: 1;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:focus {
+	color: #1d6237;
+}
+
+.navbar-expand-lg .navbar-nav .active .nav-link:before {
+	opacity: 1;
+}
+
+.dropdown-item:active {
+	background-color: #1d6237;
+}
+
+footer {
+	background-color: #1d6237;
+	padding: 50px 0;
+	color: #ffffff;
+}
+
+@media screen and (min-width: 1400px) {
+	footer {
+		font-size: 20px;
+	}
+}
+
+footer a {
+	color: #ffffff;
+}
+
+footer p:last-child {
+	margin: 0;
+}
+
+footer .navbar-expand-lg .navbar-nav .nav-link {
+	color: #ffffff;
+}
+
+footer .navbar-expand-lg .navbar-nav .nav-link:hover {
+	color: #000000;
 }
 
 /* Posts and pages
@@ -638,7 +769,7 @@ header .navbar ul {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0 0 0 0;
 }
 
 .updated:not(.published) {
@@ -674,6 +805,11 @@ header .navbar ul {
 
 .widget select {
 	max-width: 100%;
+}
+
+.swiper {
+	width: 100%;
+	height: 300px;
 }
 
 /* Media

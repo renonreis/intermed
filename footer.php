@@ -13,19 +13,25 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info container">
-			<div class="row">
-				<div class="col">
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'intermed' ) ); ?>">
+			<div class="row align-items-center text-center">
+				<div class="col-md-6">
+					<nav class="navbar navbar-expand-lg">
 						<?php
-						/* translators: %s: CMS name, i.e. WordPress. */
-						printf( esc_html__( 'Proudly powered by %s', 'intermed' ), 'WordPress' );
+							wp_nav_menu( array(
+								'theme_location'    => 'footer-menu',
+								'depth'             => 2,
+								'container'         => 'div',
+								'container_class'   => 'col',
+								'container_id'      => 'bs-example-navbar-collapse',
+								'menu_class'        => 'navbar-nav justify-content-start flex-grow-1',
+								'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+								'walker'            => new WP_Bootstrap_Navwalker(),
+							) );
 						?>
-					</a>
-					<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'intermed' ), 'intermed', '<a href="https://ninho.digital/">Ninho Digital</a>' );
-					?>
+					</nav>
+				</div>
+				<div class="col-md-6 text-md-end">
+					<p><?php echo date("Y"); ?> - Intermed - Todos os direitos reservados ©</p>
 				</div>
 			</div>
 		</div><!-- .site-info -->

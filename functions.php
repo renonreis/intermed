@@ -50,7 +50,8 @@ if ( ! function_exists( 'intermed_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'header-menu' => esc_html__( 'Header Menu', 'intermed' )
+				'header-menu' => esc_html__( 'Menu Cabeçalho', 'intermed' ),
+				'footer-menu' => esc_html__( 'Menu Rodapé', 'intermed' )
 			)
 		);
 
@@ -141,11 +142,14 @@ add_action( 'widgets_init', 'intermed_widgets_init' );
  */
 function intermed_scripts() {
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper@7/swiper-bundle.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'intermed-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'intermed-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'bootstrap-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper@7/swiper-bundle.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'intermed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
