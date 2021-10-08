@@ -64,14 +64,14 @@ header {
       margin: 0 1rem;
       padding: 0.5rem 0rem;
       position: relative;
-      @media screen and (min-width: 1400) {
+      @media screen and (min-width: 1400px) {
         font-size: 20px;
       }
 
       &:before {
         content: "";
         background-color: $color__link-hover;
-        bottom: -20px;
+        bottom: -27px;
         display: block;
         height: 4px;
         opacity: 0;
