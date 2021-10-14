@@ -52,9 +52,20 @@
     float: right;
     max-width: 489px;
     min-height: 730px;
-    overflow: hidden;
     position: relative;
     text-align: center;
+    width: 100%;
+    &:after {
+      border: 1px solid #1d6237;
+      border-radius: 30px;
+      content: "";
+      display: block;
+      height: 100%;
+      margin: -20px 20px;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
     .content {
       color: $white;
       position: relative;
@@ -69,12 +80,17 @@
       }
     }
     img {
+      border-radius: 10px;
       position: absolute;
-      left: 0;
-      top: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      width: 100%;
     }
     &::before {
       background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
       content: "";
       height: 100%;
       left: 0;
@@ -83,6 +99,41 @@
       top: 0;
       width: 100%;
       z-index: 1;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    background-position: right bottom;
+    padding: 5em 0;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    .box {
+      max-width: 270px;
+      min-height: 400px;
+      .content {
+        h2 {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        p {
+          font-size: 15px;
+        }
+        .btn {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .btn {
+      border-radius: 8px;
+      font-size: 15px;
+      margin-bottom: 40px;
+      max-width: 165px;
+      padding: 9px 15px;
     }
   }
 }
@@ -97,21 +148,27 @@
     &::before {
       background: rgba(255, 255, 255, 0.45);
       box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(5px);
       content: "";
       height: 80%;
       right: 0;
       pointer-events: none;
       position: absolute;
       top: 10%;
-      width: 195px;
+      width: 25%;
       z-index: 1;
-      -webkit-backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(5px);
     }
   }
+
   h2 {
     font-size: 60px;
     line-height: 60px;
+  }
+
+  .btn-planos {
+    font-size: 20px;
+    text-decoration: none;
   }
 
   .planos {
@@ -146,6 +203,137 @@
           display: block;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0 0 5em;
+    .box-image {
+      width: calc(100% + 1.5rem);
+      margin-left: -0.75rem;
+      &::before {
+        bottom: -15px;
+        content: "";
+        height: 30%;
+        left: 10%;
+        right: initial;
+        pointer-events: none;
+        position: absolute;
+        top: initial;
+        width: 80%;
+      }
+    }
+    h2 {
+      font-size: 40px;
+      line-height: 40px;
+      margin-top: 50px;
+      padding: 0 10px;
+    }
+    .planos {
+      margin-top: 40px;
+      .box {
+        margin-bottom: 25px;
+      }
+      h2 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.testimonials {
+  min-height: 800px;
+  overflow: hidden;
+  padding: 5em 0;
+  position: relative;
+  .overflow {
+    overflow: hidden;
+    .bg-image {
+      display: none;
+    }
+  }
+  .bg-image {
+    height: 80%;
+    margin-left: 50%;
+    max-width: 50%;
+    object-fit: cover;
+    object-position: right;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  h2 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .subtitle {
+    color: $grey;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    max-width: 530px;
+  }
+  .swiper-button-disabled {
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0 0 5em;
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .bg-image {
+      display: none;
+    }
+    .overflow {
+      .bg-image {
+        display: block;
+        height: initial;
+        min-height: 280px;
+        margin-bottom: -50px;
+        margin-left: -1.5rem;
+        max-width: calc(100% + 3rem);
+        object-position: center;
+        position: relative;
+        width: calc(100% + 3rem);
+      }
+    }
+  }
+}
+
+.partners {
+  background: linear-gradient(to right, #1d6237, #258649);
+  padding: 5em 0;
+}
+
+.milestones {
+  padding: 5em 0;
+  h2 {
+    font-size: 60px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .box {
+    h3 {
+      font-size: 70px;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    h2 {
+      font-size: 40px;
     }
   }
 }
