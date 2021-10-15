@@ -13,7 +13,7 @@ jobs:
     - name: FTP Deploy to Intermed
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        ftp-server: 192.169.151.159
-        ftp-username: intermedsaude@intermedsaude.online
-        ftp-password: ${{ secrets.STAGING_FTP_PASSWORD }}
+        server: 192.169.151.159
+        username: intermedsaude@intermedsaude.online
+        password: ${{ secrets.STAGING_FTP_PASSWORD }}
         delete: "false"
