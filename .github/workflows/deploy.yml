@@ -21,4 +21,4 @@ jobs:
         server: 192.169.151.159
         username: intermedsaude@intermedsaude.online
         password: ${{ secrets.STAGING_FTP_PASSWORD }}
-        server-dir: './homologacao'
+        server-dir: './homologacao/'
