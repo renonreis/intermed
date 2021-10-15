@@ -16,4 +16,4 @@ jobs:
         ftp-server: 192.169.151.159
         ftp-username: intermedsaude@intermedsaude.online
         ftp-password: ${{ secrets.STAGING_FTP_PASSWORD }}
-        local-dir: "./homologacao"
+        delete: "false"
