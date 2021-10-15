@@ -102,6 +102,41 @@ header {
   }
 }
 
+.offcanvas {
+  background-color: $light-green;
+  .btn-close {
+    background: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    margin: 0;
+    svg {
+      font-weight: 700;
+    }
+  }
+  .navbar-nav {
+    li.active {
+      a {
+        font-weight: 700;
+        span {
+          border-bottom: 3px solid $green;
+        }
+      }
+    }
+    li:last-child {
+      a {
+        background-color: #258649;
+        border-radius: 50px;
+        color: #ffffff;
+        font-weight: 700;
+        padding: 0.5rem 3rem;
+        float: left;
+      }
+    }
+  }
+}
+
 footer {
   background-color: $dark-green;
   padding: 50px 0;

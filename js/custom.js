@@ -45,7 +45,7 @@ document.addEventListener('scroll', function() {
 
   if(milestone){
     const counters = document.querySelectorAll('.counter-value');
-    const speed = 3500;
+    const speed = 2000;
 
     counters.forEach( counter => {
       const animate = () => {
@@ -63,32 +63,4 @@ document.addEventListener('scroll', function() {
       animate();
     });
   }
-});
-
-document.body.addEventListener('scroll', function () {
-  const detectScroll = document.documentElement.scrollTop || document.body.scrollTop;
-  console.log(detectScroll)
-  
-  if (document.querySelector('.milestones').offsetTop > document.body.scrollTop) {
-    const counters = document.querySelectorAll('.counter-value');
-    const speed = 500;
-
-    counters.forEach( counter => {
-      const animate = () => {
-        const value = +counter.getAttribute('data-count');
-        const data = +counter.innerText;
-        
-        const time = value / speed;
-        if(data < value) {
-          counter.innerText = Math.ceil(data + time);
-          setTimeout(animate, 1);
-        } else {
-          counter.innerText = value;
-        }     
-      }   
-      animate();
-    });
-  }
-
 })
-

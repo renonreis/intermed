@@ -60,7 +60,9 @@
 								<h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 									<?php get_template_part( 'template-parts/svg/logo' ); ?>
 								</h5>
-								<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+								<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+									<?php get_template_part( 'template-parts/svg/close' ); ?>
+								</button>
 							</div>
 							<div class="offcanvas-body row">
 								<?php

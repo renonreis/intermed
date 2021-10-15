@@ -611,10 +611,12 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	background-color: #f5f5f5;
 	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 3px;
+	border: 1px solid #13161b;
+	border-radius: 35px;
+	padding: 20px 35px;
+	font-size: 20px;
 }
 
 input[type="text"]:focus,
@@ -637,7 +639,7 @@ textarea:focus {
 }
 
 select {
-	border: 1px solid #ccc;
+	border: 1px solid #13161b;
 }
 
 textarea {
@@ -745,6 +747,40 @@ header .navbar-expand-lg .navbar-nav li:last-child .nav-link:before {
 
 .dropdown-item:active {
 	background-color: #1d6237;
+}
+
+.offcanvas {
+	background-color: #f0f9f4;
+}
+
+.offcanvas .btn-close {
+	background: none;
+	padding: 0;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	margin: 0;
+}
+
+.offcanvas .btn-close svg {
+	font-weight: 700;
+}
+
+.offcanvas .navbar-nav li.active a {
+	font-weight: 700;
+}
+
+.offcanvas .navbar-nav li.active a span {
+	border-bottom: 3px solid #258649;
+}
+
+.offcanvas .navbar-nav li:last-child a {
+	background-color: #258649;
+	border-radius: 50px;
+	color: #ffffff;
+	font-weight: 700;
+	padding: 0.5rem 3rem;
+	float: left;
 }
 
 footer {
@@ -1147,6 +1183,30 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	}
 }
 
+.contact {
+	padding: 5rem 0;
+}
+
+.contact.bg-grey {
+	background-color: #f5f5f5;
+}
+
+.contact h2 {
+	font-size: 60px;
+	font-weight: 700;
+	color: #258649;
+}
+
+.contact p {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 991px) {
+	.contact h2 {
+		font-size: 40px;
+	}
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -1298,6 +1358,57 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 
 .gallery-caption {
 	display: block;
+}
+
+/* Forms
+--------------------------------------------- */
+form label {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+form input,
+form select,
+form textarea {
+	width: 100%;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+	border-color: #258649;
+	outline: none;
+}
+
+form textarea {
+	min-height: 125px;
+}
+
+form input[type="submit"] {
+	background-color: #258649;
+	border-color: #258649;
+	border-radius: 15px;
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 700;
+	max-width: 170px;
+	padding: 15px 10px;
+	transition: all 0.3s;
+}
+
+form input[type="submit"]:hover {
+	background-color: #1d6237;
+	border-color: #1d6237;
+}
+
+form .wpcf7-not-valid-tip {
+	position: absolute;
+	font-size: 0.75em;
+}
+
+form .wpcf7-spinner {
+	position: absolute;
+	margin-top: 15px;
 }
 
 /*--------------------------------------------------------------
