@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: FTP Deploy to WP Engine (Staging)
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+    - name: FTP Deploy to Intermed
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         ftp-server: 192.169.151.159
         ftp-username: intermedsaude@intermedsaude.online
