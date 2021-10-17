@@ -15,7 +15,7 @@
     
     get_template_part( 'template-parts/components/testimonials', '', $args = array( 'background_color' => 'bg-grey' )); 
     
-    get_template_part( 'template-parts/components/contact-form', '', $args = array( 'contact_form_id' => '68' )); 
+    get_template_part( 'template-parts/components/contact-form', '', $args = array( 'contact_form_id' => '78' )); 
   
   ?>
 </main>
