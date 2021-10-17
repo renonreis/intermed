@@ -40,10 +40,12 @@ var swiper = new Swiper(".swiper-partners", {
 });
 
 document.addEventListener('scroll', function() {
-  lastKnownScrollPosition = window.scrollY + 150;
-  const milestone = document.querySelector('.milestones').offsetTop < lastKnownScrollPosition
+  lastKnownScrollPosition = window.scrollY + 160
+  
+  const milestone = document.querySelector('.milestones') ? document.querySelector('.milestones') : ''
+  const loadMilestone = milestone.offsetTop < lastKnownScrollPosition
 
-  if(milestone){
+  if(loadMilestone){
     const counters = document.querySelectorAll('.counter-value');
     const speed = 2000;
 
@@ -63,4 +65,11 @@ document.addEventListener('scroll', function() {
       animate();
     });
   }
+})
+
+const actualBtn = document.querySelector('.wpcf7-file');
+const fileChosen = document.getElementById('file-chosen');
+
+actualBtn.addEventListener('change', function(){
+  fileChosen.textContent = this.files[0].name
 })

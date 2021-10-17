@@ -48,6 +48,9 @@ header {
   &:focus {
     color: $color__link-hover;
   }
+  @media screen and (min-width: 1400px) {
+    font-size: 20px;
+  }
 }
 
 .offcanvas {
@@ -146,6 +149,9 @@ footer {
   }
   a {
     color: $white;
+    &:hover {
+      color: $black;
+    }
   }
   p:last-child {
     margin: 0;

@@ -21,9 +21,19 @@ $color__border-abbr: #666;
 
 $white: #ffffff;
 $black: #000000;
+$black-neutral: #1b262c;
+
 $light-green: #f0f9f4;
 $green: #258649;
+$dark-green: #1d6237;
+
 $grey: #7b7b7b;
 $light-grey: #f5f5f5;
 $medium-grey: #c6c6c6;
-$dark-green: #1d6237;
+$dark-grey: #7b7b7b;
+
+$green-gradients: linear-gradient(to right, #1d6237, #258649);
+
+.bg-grey {
+  background-color: $light-grey;
+}

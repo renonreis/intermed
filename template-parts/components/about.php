@@ -16,28 +16,28 @@
       <div class="col-md-12 text-center">
         <h2>Conheça nossos planos</h2>
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg-3">
         <div class="box">
           <p class="number">01</p>
           <h3>Plano <span>Xxxxx</span></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
         </div>
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg-3">
         <div class="box">
           <p class="number">01</p>
           <h3>Plano <span>Xxxxx</span></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
         </div>
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg-3">
         <div class="box">
           <p class="number">01</p>
           <h3>Plano <span>Xxxxx</span></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
         </div>
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg-3">
         <div class="box">
           <p class="number">01</p>
           <h3>Plano <span>Xxxxx</span></h3>

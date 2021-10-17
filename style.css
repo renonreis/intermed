@@ -49,6 +49,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+.bg-grey {
+	background-color: #f5f5f5;
+}
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -611,7 +615,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	background-color: #f5f5f5;
+	background-color: #ffffff;
 	color: #666;
 	border: 1px solid #13161b;
 	border-radius: 35px;
@@ -638,12 +642,52 @@ textarea:focus {
 	color: #111;
 }
 
+@media screen and (max-width: 991px) {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea {
+		padding: 10px 25px;
+	}
+}
+
 select {
 	border: 1px solid #13161b;
 }
 
 textarea {
 	width: 100%;
+}
+
+.bg-grey input[type="text"],
+.bg-grey input[type="email"],
+.bg-grey input[type="url"],
+.bg-grey input[type="password"],
+.bg-grey input[type="search"],
+.bg-grey input[type="number"],
+.bg-grey input[type="tel"],
+.bg-grey input[type="range"],
+.bg-grey input[type="date"],
+.bg-grey input[type="month"],
+.bg-grey input[type="week"],
+.bg-grey input[type="time"],
+.bg-grey input[type="datetime"],
+.bg-grey input[type="datetime-local"],
+.bg-grey input[type="color"],
+.bg-grey textarea {
+	background-color: #f5f5f5;
 }
 
 /*--------------------------------------------------------------
@@ -700,6 +744,12 @@ header .navbar-expand-lg .navbar-nav li:last-child .nav-link:before {
 
 .nav-link:focus {
 	color: #1d6237;
+}
+
+@media screen and (min-width: 1400px) {
+	.nav-link {
+		font-size: 20px;
+	}
 }
 
 .offcanvas .nav-link {
@@ -797,6 +847,10 @@ footer {
 
 footer a {
 	color: #ffffff;
+}
+
+footer a:hover {
+	color: #000000;
 }
 
 footer p:last-child {
@@ -1041,7 +1095,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	display: block;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
 	.about {
 		padding: 0 0 5em;
 	}
@@ -1060,12 +1114,6 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 		top: initial;
 		width: 80%;
 	}
-	.about h2 {
-		font-size: 40px;
-		line-height: 40px;
-		margin-top: 50px;
-		padding: 0 10px;
-	}
 	.about .planos {
 		margin-top: 40px;
 	}
@@ -1074,6 +1122,15 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	}
 	.about .planos h2 {
 		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.about h2 {
+		font-size: 40px;
+		line-height: 40px;
+		margin-top: 50px;
+		padding: 0 10px;
 	}
 }
 
@@ -1102,7 +1159,6 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	position: absolute;
 	right: 0;
 	width: 100%;
-	z-index: -1;
 }
 
 .testimonials h2 {
@@ -1124,7 +1180,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 
 @media screen and (max-width: 991px) {
 	.testimonials {
-		padding: 0 0 5em;
+		padding: 5em 0;
 	}
 	.testimonials h2 {
 		font-size: 40px;
@@ -1204,6 +1260,416 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 @media screen and (max-width: 991px) {
 	.contact h2 {
 		font-size: 40px;
+	}
+}
+
+.pages-banner {
+	min-height: 620px;
+	overflow: hidden;
+	position: relative;
+}
+
+.pages-banner img {
+	position: absolute;
+	min-height: 620px;
+	margin-left: 50%;
+	object-fit: cover;
+	object-position: bottom;
+	top: 0;
+	transform: translateX(-50%);
+	width: 100%;
+	z-index: -1;
+}
+
+.pages-banner .title-banner {
+	background-color: #ffffff;
+	border-bottom: 7px solid #258649;
+	border-radius: 15px 15px 0 0;
+	margin: 0;
+	padding: 30px 0;
+}
+
+.pages-banner .title-banner h1 {
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 60px;
+	margin: 0;
+}
+
+.pages-banner .title-banner p {
+	line-height: 30px;
+	margin: 0;
+}
+
+.pages-banner.with-title {
+	min-height: 725px;
+}
+
+@media screen and (max-width: 991px) {
+	.pages-banner {
+		min-height: 455px;
+	}
+	.pages-banner .title-banner {
+		margin-bottom: 15px;
+	}
+	.pages-banner .title-banner h1 {
+		font-size: 36px;
+	}
+	.pages-banner .title-banner p {
+		margin-bottom: 25px;
+	}
+}
+
+.telemedicina-planos {
+	position: relative;
+}
+
+.telemedicina-planos .row {
+	padding: 2.5em 0;
+}
+
+@media screen and (min-width: 768px) {
+	.telemedicina-planos .row:nth-child(even) .orders {
+		order: -1;
+		text-align: left !important;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.telemedicina-planos .row:nth-child(even) .orders {
+		margin: 0 0 0 5%;
+	}
+	.telemedicina-planos .row .orders {
+		margin-right: 5%;
+	}
+}
+
+.telemedicina-planos .box-image {
+	position: relative;
+}
+
+.telemedicina-planos .box-image::before {
+	background: rgba(255, 255, 255, 0.45);
+	box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+	backdrop-filter: blur(5px);
+	content: "";
+	height: 80%;
+	right: -10px;
+	pointer-events: none;
+	position: absolute;
+	top: 10%;
+	width: 25%;
+	z-index: 1;
+	-webkit-backdrop-filter: blur(5px);
+}
+
+.telemedicina-planos .btn {
+	border-radius: 0 15px 0 15px;
+}
+
+.telemedicina-planos h2 {
+	font-size: 50px;
+	line-height: 50px;
+}
+
+.telemedicina-planos h2::first-line {
+	font-weight: 700;
+}
+
+.telemedicina-planos:before {
+	content: url(./assets/img/svg/bg-about.svg);
+	position: absolute;
+	top: -155px;
+	z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+	.telemedicina-planos:before {
+		display: none;
+	}
+	.telemedicina-planos .row {
+		padding: 0 0 5em;
+	}
+	.telemedicina-planos .box-image {
+		width: calc(100% + 1.5rem);
+		margin-left: -0.75rem;
+	}
+	.telemedicina-planos .box-image::before {
+		bottom: -15px;
+		content: "";
+		height: 30%;
+		left: 5%;
+		right: initial;
+		pointer-events: none;
+		position: absolute;
+		top: initial;
+		width: 90%;
+	}
+	.telemedicina-planos h2 {
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.telemedicina-planos h2 {
+		font-size: 40px;
+		line-height: 40px;
+		margin-top: 50px;
+	}
+}
+
+.faq {
+	padding: 5em 0;
+}
+
+.faq .title {
+	font-size: 60px;
+	max-width: 425px;
+	margin: 0 auto 25px;
+}
+
+.faq .title::first-line {
+	font-weight: 700;
+}
+
+.faq .subtitle {
+	line-height: 20px;
+}
+
+.faq .accordion .accordion-item {
+	border: 0;
+	margin-bottom: 10px;
+}
+
+.faq .accordion .accordion-item .accordion-button {
+	background: linear-gradient(to right, #1d6237, #258649);
+	color: #ffffff;
+	font-size: 18px;
+	border-radius: 0 15px 0 15px;
+	transition: all 0.3s;
+}
+
+.faq .accordion .accordion-item .accordion-button.collapsed {
+	background: #f0f9f4;
+	color: #1b262c;
+	border-radius: 15px;
+}
+
+.faq .accordion .accordion-item .accordion-button::after {
+	background: none;
+	content: "+";
+	transform: rotate(-180deg);
+}
+
+.faq .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+	background: none;
+	content: "-";
+}
+
+.faq .accordion .accordion-item .accordion-button:focus {
+	border: 0;
+	box-shadow: none;
+}
+
+@media screen and (max-width: 991px) {
+	.faq .title {
+		font-size: 40px;
+		text-align: center;
+	}
+	.faq .subtitle {
+		text-align: center;
+	}
+	.faq .accordion {
+		margin-top: 25px;
+	}
+}
+
+.about-insurance {
+	background-color: #f0f9f4;
+	padding: 4em 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.about-insurance h2 {
+	color: #258649;
+	font-size: 60px;
+	line-height: 60px;
+	margin-bottom: 30px;
+}
+
+.about-insurance p {
+	font-size: 20px;
+	line-height: 20px;
+	margin: 0;
+}
+
+.about-insurance .overflow {
+	overflow: hidden;
+}
+
+.about-insurance .overflow .bg-image {
+	display: none;
+}
+
+.about-insurance .bg-image {
+	height: 100%;
+	margin-left: 50%;
+	max-width: 30%;
+	object-fit: cover;
+	object-position: right;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+	.about-insurance {
+		padding: 0 0 4em;
+		text-align: center;
+	}
+	.about-insurance h2 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.about-insurance .bg-image {
+		display: none;
+		margin-bottom: 60px;
+	}
+	.about-insurance .overflow .bg-image {
+		display: block;
+		height: initial;
+		min-height: 280px;
+		margin-left: -1.5rem;
+		max-width: calc(100% + 3rem);
+		object-position: center;
+		position: relative;
+		width: calc(100% + 3rem);
+	}
+}
+
+.benefits {
+	padding: 6em 0;
+}
+
+.benefits h2 {
+	color: #258649;
+	font-size: 60px;
+	line-height: 60px;
+	margin: 0 auto 40px;
+	max-width: 535px;
+}
+
+.benefits h2::first-line {
+	font-weight: 700;
+}
+
+.benefits p {
+	font-size: 27px;
+	line-height: 30px;
+	margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+	.benefits {
+		text-align: center;
+	}
+	.benefits h2 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.benefits p {
+		font-size: 20px;
+	}
+}
+
+.cta {
+	background: linear-gradient(to right, #1d6237, #258649);
+	padding: 3em 0;
+}
+
+.cta h2 {
+	color: #ffffff;
+	font-size: 40px;
+	line-height: 40px;
+	margin-bottom: 40px;
+}
+
+.cta h2::first-line {
+	font-weight: 700;
+}
+
+.cta .btn {
+	background-color: #258649;
+	border-radius: 0 15px 0 15px;
+}
+
+.cta .btn:hover {
+	background-color: #1d6237;
+}
+
+.team {
+	padding: 5em 0;
+	position: relative;
+}
+
+.team:before {
+	content: "";
+	background: #f0f9f4;
+	left: 0;
+	min-height: 660px;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.team h2 {
+	font-size: 60px;
+	line-height: 60px;
+}
+
+.team p {
+	font-size: 30px;
+	line-height: 30px;
+}
+
+.team .box {
+	text-align: center;
+}
+
+.team .box img {
+	border-radius: 40px 0 40px 0;
+	margin-bottom: 25px;
+}
+
+.team .box h3 {
+	color: #258649;
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0;
+	line-height: 32px;
+}
+
+.team .box p {
+	color: #7b7b7b;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 991px) {
+	.team {
+		text-align: center;
+	}
+	.team h2 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.team p {
+		font-size: 20px;
 	}
 }
 
@@ -1391,7 +1857,6 @@ form input[type="submit"] {
 	font-size: 24px;
 	color: #ffffff;
 	font-weight: 700;
-	max-width: 170px;
 	padding: 15px 10px;
 	transition: all 0.3s;
 }
@@ -1399,6 +1864,10 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
 	background-color: #1d6237;
 	border-color: #1d6237;
+}
+
+form .wpcf7-submit {
+	max-width: 170px;
 }
 
 form .wpcf7-not-valid-tip {
@@ -1409,6 +1878,37 @@ form .wpcf7-not-valid-tip {
 form .wpcf7-spinner {
 	position: absolute;
 	margin-top: 15px;
+}
+
+form .wpcf7-form-control-wrap.anexo {
+	display: block;
+}
+
+form .wpcf7-form-control-wrap.anexo:after {
+	content: "+";
+	background-color: #258649;
+	border-radius: 35px;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 70px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	width: 70px;
+}
+
+form input[type="file"] {
+	color: #666;
+	border: 1px solid #13161b;
+	border-radius: 35px;
+	padding: 20px 35px;
+	font-size: 20px;
+}
+
+form input[type="file"]::file-selector-button {
+	display: none;
 }
 
 /*--------------------------------------------------------------

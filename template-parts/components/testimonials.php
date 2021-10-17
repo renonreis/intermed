@@ -1,4 +1,4 @@
-<section class="testimonials">
+<section class="testimonials <?php echo __( $args['background_color'] ); ?>">
   <img class="bg-image" src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/img-testimonials.jpg">
   <div class="container">
     <div class="row">

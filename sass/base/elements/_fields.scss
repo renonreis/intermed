@@ -14,7 +14,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  background-color: $light-grey;
+  background-color: $white;
   color: $color__text-input;
   border: 1px solid $color__border-input;
   border-radius: 35px;
@@ -24,6 +24,10 @@ textarea {
   &:focus {
     color: $color__text-input-focus;
   }
+
+  @media screen and (max-width: 991px) {
+    padding: 10px 25px;
+  }
 }
 
 select {
@@ -32,4 +36,25 @@ select {
 
 textarea {
   width: 100%;
+}
+
+.bg-grey {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  textarea {
+    background-color: $light-grey;
+  }
 }
