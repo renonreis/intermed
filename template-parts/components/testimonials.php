@@ -1,47 +1,37 @@
+<?php 
+
+  $conteudo = get_field('conteudo_depoimentos');
+
+?>
+
 <section class="testimonials <?php echo __( $args['background_color'] ); ?>">
   <img class="bg-image" src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/img-testimonials.jpg">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h2>Depoimentos</h2>
-        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
+        <h2><?php echo $conteudo['titulo']; ?></h2>
+        <p class="subtitle"><?php echo $conteudo['descricao']; ?></p>
       </div>
       <div class="col-md-12 overflow">
         <img class="bg-image" src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/img-testimonials.jpg">
         <div class="swiper-testimonials">
-          <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                <h3>Nome do cliente</h3>
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                <h3>Nome do cliente</h3>
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                <h3>Nome do cliente</h3>
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                <h3>Nome do cliente</h3>
-              </div>
-            </div>
-          </div>
-          
-          
+            <?php
+              if( have_rows('depoimentos') ):
+                while( have_rows('depoimentos') ) : the_row();
+                ?>
+                  <div class="swiper-slide">
+                    <div class="box">
+                      <p><?php echo get_sub_field('descricao'); ?></p>
+                      <h3><?php echo get_sub_field('autor'); ?></h3>
+                    </div>
+                  </div>
+                <?php
+                endwhile;
+              else :
+              endif;
+            ?>
+          </div>  
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 mt-5">

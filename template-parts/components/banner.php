@@ -1,19 +1,25 @@
+<?php 
+
+$conteudo = get_field('conteudo_banner');
+$imagem = get_field('imagem_banner');
+
+?>
 <section class="home-banner">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-        <h3>Ligue agora</h3>
-        <a href="" class="btn">0800-000-0000</a>
+        <h1><?php echo $conteudo['titulo']; ?></h1>
+        <p><?php echo $conteudo['subtitulo']; ?></p>
+        <h3><?php echo $conteudo['titulo_botao']; ?></h3>
+        <a href="<?php echo $conteudo['link_botao']; ?>" class="btn"><?php echo $conteudo['texto_botao']; ?></a>
       </div>
       <div class="col-md-6 d-flex justify-content-center text-center text-md-end">
         <div class="box">						
-          <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/img-banner.jpg">
+          <img src="<?php echo esc_url( $imagem['imagem_fundo']['url'] ); ?>" alt="<?php echo esc_url( $imagem['imagem_fundo']['alt'] ); ?>">
           <div class="content">
-            <h2>Telemedicina</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-            <a href="#" class="btn">Contratar</a>
+            <h2><?php echo $imagem['titulo']; ?></h2>
+            <p><?php echo $imagem['subtitulo']; ?></p>
+            <a href="<?php echo $imagem['link_botao']; ?>" class="btn"><?php echo $imagem['texto_botao']; ?></a>
           </div>
         </div>
       </div>

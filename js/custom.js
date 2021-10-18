@@ -70,6 +70,18 @@ document.addEventListener('scroll', function() {
 const actualBtn = document.querySelector('.wpcf7-file');
 const fileChosen = document.getElementById('file-chosen');
 
-actualBtn.addEventListener('change', function(){
-  fileChosen.textContent = this.files[0].name
+if(actualBtn) {
+  actualBtn.addEventListener('change', function(){
+    fileChosen.textContent = this.files[0].name
+  })
+}
+
+const elms = document.querySelectorAll(".boldFirstWord");
+elms.forEach((el, i) => {
+  str = el.innerText;
+  const removeSpaces = str.split(" ");
+  let firstWord = removeSpaces[0];
+
+  firstWord = str.replace(firstWord, '<strong>$&</strong>');
+  el.innerHTML = firstWord;
 })

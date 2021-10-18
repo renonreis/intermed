@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row mb-5">
       <div class="col-lg-8 offset-lg-2 text-center">
-        <h2>Nosso Time</h2>
+        <h2 class="boldFirstWord">Nosso Time</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
       </div>
     </div>

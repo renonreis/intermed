@@ -140,7 +140,7 @@ abbr[title] {
  */
 b,
 strong {
-	font-weight: bolder;
+	font-weight: 700;
 }
 
 /**
@@ -1069,7 +1069,19 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	border-radius: 15px 15px 0 0;
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
 	margin-bottom: 60px;
+	transition: all 0.3s;
+}
+
+.about .planos .box:hover {
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+	border-bottom-color: #1d6237;
+}
+
+.about .planos .box a {
+	display: block;
+	color: #000000;
 	padding: 30px 30px 60px;
+	text-decoration: none;
 }
 
 .about .planos .box .number {
@@ -1093,6 +1105,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 
 .about .planos .box h3 span {
 	display: block;
+	font-weight: 700;
 }
 
 @media screen and (max-width: 767px) {
@@ -1219,6 +1232,10 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	font-size: 60px;
 }
 
+.milestones h2::first-line {
+	font-weight: 700;
+}
+
 .milestones p {
 	font-size: 24px;
 	font-weight: 700;
@@ -1328,7 +1345,14 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	padding: 2.5em 0;
 }
 
+.telemedicina-planos .row h2 {
+	margin-left: 50px;
+}
+
 @media screen and (min-width: 768px) {
+	.telemedicina-planos .row:nth-child(even) h2 {
+		margin-left: 0px;
+	}
 	.telemedicina-planos .row:nth-child(even) .orders {
 		order: -1;
 		text-align: left !important;
@@ -1425,7 +1449,6 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 .faq .title {
 	font-size: 60px;
 	max-width: 425px;
-	margin: 0 auto 25px;
 }
 
 .faq .title::first-line {
@@ -1452,7 +1475,6 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 .faq .accordion .accordion-item .accordion-button.collapsed {
 	background: #f0f9f4;
 	color: #1b262c;
-	border-radius: 15px;
 }
 
 .faq .accordion .accordion-item .accordion-button::after {
