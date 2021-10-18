@@ -88,3 +88,19 @@ function remove_comment_support() {
   remove_post_type_support( 'page', 'comments' );
 }
 add_action('init', 'remove_comment_support', 100);
+
+/**
+ * Change error Login menssage
+ */
+function no_wordpress_errors(){
+  return 'Email e/ou senha inválidos!';
+}
+add_filter( 'login_errors', 'no_wordpress_errors' );
+
+/**
+ * Custom WP Admin Login 
+ */
+function my_login_stylesheet() {
+  wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/admin/login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
