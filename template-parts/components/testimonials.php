@@ -5,7 +5,7 @@
 ?>
 
 <section class="testimonials <?php echo __( $args['background_color'] ); ?>">
-  <img class="bg-image" src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/img-testimonials.jpg">
+  <img class="bg-image" src="<?php echo $conteudo['imagem_de_fundo']['url']; ?>" alt="<?php echo $conteudo['imagem_de_fundo']['alt']; ?>">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -13,7 +13,7 @@
         <p class="subtitle"><?php echo $conteudo['descricao']; ?></p>
       </div>
       <div class="col-md-12 overflow">
-        <img class="bg-image" src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/img-testimonials.jpg">
+        <img class="bg-image" src="<?php echo $conteudo['imagem_de_fundo']['url']; ?>" alt="<?php echo $conteudo['imagem_de_fundo']['alt']; ?>">
         <div class="swiper-testimonials">
           <div class="swiper-wrapper">
             <?php
