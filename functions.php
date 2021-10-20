@@ -159,6 +159,11 @@ function intermed_scripts() {
 add_action( 'wp_enqueue_scripts', 'intermed_scripts' );
 
 /**
+ * Implement ACF config pages.
+ */
+require get_template_directory() . '/inc/acf.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

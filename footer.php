@@ -31,12 +31,14 @@
 					</nav>
 				</div>
 				<div class="col-md-6 text-md-end">
-					<p><?php echo date("Y"); ?> - Intermed - Todos os direitos reservados ©</p>
+					<p><?php the_field( 'copyright', 'options' ); ?></p>
 				</div>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+<?php the_field( 'scripts_footer', 'option' ); ?>
 
 <?php wp_footer(); ?>
 

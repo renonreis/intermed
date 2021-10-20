@@ -589,7 +589,7 @@ input[type="submit"]:focus {
 	background-color: #258649;
 	border-radius: 15px;
 	color: #ffffff !important;
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 700;
 	padding: 5px 35px;
 	text-align: center;
@@ -746,12 +746,6 @@ header .navbar-expand-lg .navbar-nav li:last-child .nav-link:before {
 	color: #1d6237;
 }
 
-@media screen and (min-width: 1400px) {
-	.nav-link {
-		font-size: 20px;
-	}
-}
-
 .offcanvas .nav-link {
 	text-align: left;
 }
@@ -770,7 +764,7 @@ header .navbar-expand-lg .navbar-nav li:last-child .nav-link:before {
 .navbar-expand-lg .navbar-nav .nav-link:before {
 	content: "";
 	background-color: #1d6237;
-	bottom: -27px;
+	bottom: -30px;
 	display: block;
 	height: 4px;
 	opacity: 0;
@@ -822,6 +816,10 @@ header .navbar-expand-lg .navbar-nav li:last-child .nav-link:before {
 
 .offcanvas .navbar-nav li.active a span {
 	border-bottom: 3px solid #258649;
+}
+
+.offcanvas .navbar-nav li:last-child {
+	margin-top: 50px;
 }
 
 .offcanvas .navbar-nav li:last-child a {
@@ -904,7 +902,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 
 .home-banner h1 {
 	color: #000000;
-	font-size: 100px;
+	font-size: 70px;
 	line-height: 90px;
 	margin: 0 0 30px;
 }
@@ -953,7 +951,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 
 .home-banner .box .content h2 {
 	color: #ffffff;
-	font-size: 60px;
+	font-size: 40px;
 	font-weight: 700;
 	margin-bottom: 30px;
 	line-height: 60px;
@@ -989,7 +987,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 		text-align: center;
 	}
 	.home-banner h1 {
-		font-size: 50px;
+		font-size: 40px;
 		line-height: 50px;
 	}
 	.home-banner h3 {
@@ -1045,7 +1043,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .about h2 {
-	font-size: 60px;
+	font-size: 40px;
 	line-height: 60px;
 }
 
@@ -1175,7 +1173,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .testimonials h2 {
-	font-size: 60px;
+	font-size: 40px;
 	font-weight: 700;
 }
 
@@ -1229,7 +1227,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .milestones h2 {
-	font-size: 60px;
+	font-size: 40px;
 }
 
 .milestones h2::first-line {
@@ -1265,7 +1263,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .contact h2 {
-	font-size: 60px;
+	font-size: 40px;
 	font-weight: 700;
 	color: #258649;
 }
@@ -1307,7 +1305,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .pages-banner .title-banner h1 {
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: 700;
 	line-height: 60px;
 	margin: 0;
@@ -1392,7 +1390,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .telemedicina-planos h2 {
-	font-size: 50px;
+	font-size: 40px;
 	line-height: 50px;
 }
 
@@ -1447,7 +1445,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .faq .title {
-	font-size: 60px;
+	font-size: 40px;
 	max-width: 425px;
 }
 
@@ -1515,14 +1513,14 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 
 .about-insurance h2 {
 	color: #258649;
-	font-size: 60px;
+	font-size: 40px;
 	line-height: 60px;
 	margin-bottom: 30px;
 }
 
 .about-insurance p {
 	font-size: 20px;
-	line-height: 20px;
+	line-height: 30px;
 	margin: 0;
 }
 
@@ -1578,7 +1576,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 
 .benefits h2 {
 	color: #258649;
-	font-size: 60px;
+	font-size: 40px;
 	line-height: 60px;
 	margin: 0 auto 40px;
 	max-width: 535px;
@@ -1589,7 +1587,7 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .benefits p {
-	font-size: 27px;
+	font-size: 20px;
 	line-height: 30px;
 	margin: 0;
 }
@@ -1650,12 +1648,12 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .team h2 {
-	font-size: 60px;
+	font-size: 40px;
 	line-height: 60px;
 }
 
 .team p {
-	font-size: 30px;
+	font-size: 20px;
 	line-height: 30px;
 }
 

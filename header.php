@@ -22,11 +22,17 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/favicon/site.webmanifest">
 
+	<?php the_field( 'scripts_header', 'option' ); ?>
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php the_field( 'scripts_body', 'option' ); ?>
+
 <?php wp_body_open(); ?>
+
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header">

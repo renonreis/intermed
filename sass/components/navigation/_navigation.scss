@@ -48,9 +48,6 @@ header {
   &:focus {
     color: $color__link-hover;
   }
-  @media screen and (min-width: 1400px) {
-    font-size: 20px;
-  }
 }
 
 .offcanvas {
@@ -71,7 +68,7 @@ header {
       &:before {
         content: "";
         background-color: $color__link-hover;
-        bottom: -27px;
+        bottom: -30px;
         display: block;
         height: 4px;
         opacity: 0;
@@ -128,6 +125,7 @@ header {
       }
     }
     li:last-child {
+      margin-top: 50px;
       a {
         background-color: #258649;
         border-radius: 50px;
