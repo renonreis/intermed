@@ -50,6 +50,7 @@
     border-radius: 10px;
     display: flex;
     float: right;
+    justify-content: center;
     max-width: 489px;
     min-height: 730px;
     position: relative;
@@ -61,15 +62,17 @@
       content: "";
       display: block;
       height: 100%;
-      margin: -20px 20px;
       position: absolute;
       width: 100%;
       z-index: -1;
+      bottom: -20px;
+      right: -20px;
     }
     .content {
       color: $white;
       position: relative;
       padding: 40px 15px;
+      width: 100%;
       z-index: 1;
       h2 {
         color: $white;
@@ -206,8 +209,8 @@
       }
       h3 {
         color: $black;
-        font-size: 40px;
-        line-height: 50px;
+        font-size: 25px;
+        line-height: 30px;
         margin-bottom: 15px;
         span {
           display: block;
@@ -408,6 +411,10 @@
     }
   }
 
+  &.contact {
+    min-height: 300px;
+  }
+
   &.with-title {
     min-height: 725px;
   }
@@ -478,8 +485,8 @@
   }
 
   h2 {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 25px;
+    line-height: 30px;
     &::first-line {
       font-weight: 700;
     }

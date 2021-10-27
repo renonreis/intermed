@@ -5,7 +5,7 @@
 
 ?>
 
-<section class="pages-banner <?php if($args['with_title']){ echo 'with-title '; }; ?>d-flex align-items-end">
+<section class="pages-banner <?php if($args['with_title']){ echo 'with-title '; }; ?><?php if($args['contact']){ echo 'contact '; }; ?>d-flex align-items-end">
   <img src="<?php echo esc_url($imagem['url']); ?>" alt="<?php echo esc_url( $imagem['imagem_fundo']['alt'] ); ?>">
   <?php if($args['with_title']){ ?>
     <div class="container">

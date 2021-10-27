@@ -31,7 +31,7 @@
           while( have_rows('conteudo_planos') ) : the_row();
 
           ?>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-4">
               <div class="box">
                 <a href="<?php echo get_sub_field('link'); ?>">
                   <p class="number"><?php echo sprintf("%02d", $index++); ?></p>

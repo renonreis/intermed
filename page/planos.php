@@ -11,10 +11,6 @@
     
     get_template_part( 'template-parts/components/telemedicina-planos'); 
 
-    get_template_part( 'template-parts/components/about-insurance'); 
-
-    get_template_part( 'template-parts/components/benefits');
-
     get_template_part( 'template-parts/components/cta-planos'); 
     
     get_template_part( 'template-parts/components/testimonials', '', $args = array( 'background_color' => 'bg-grey' )); 
