@@ -907,6 +907,11 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	font-weight: 700;
 }
 
+.home-banner h4 {
+	color: #000000;
+	font-weight: 700;
+}
+
 .home-banner .btn {
 	max-width: 350px;
 	width: 100%;
@@ -975,6 +980,25 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	top: 0;
 	width: 100%;
 	z-index: 1;
+}
+
+.home-banner .app {
+	margin: 50px 0;
+}
+
+.home-banner .app a {
+	text-decoration: none;
+	margin-right: 5px;
+}
+
+.home-banner .app img {
+	border-radius: 3px;
+}
+
+@media screen and (max-width: 991px) {
+	.home-banner .app {
+		margin: 0 0 50px;
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -1276,17 +1300,17 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 }
 
 .pages-banner {
-	min-height: 620px;
+	min-height: 300px;
 	overflow: hidden;
 	position: relative;
 }
 
 .pages-banner img {
 	position: absolute;
-	min-height: 620px;
+	max-height: 300px;
 	margin-left: 50%;
 	object-fit: cover;
-	object-position: bottom;
+	object-position: top;
 	top: 0;
 	transform: translateX(-50%);
 	width: 100%;
@@ -1313,17 +1337,17 @@ footer .navbar-expand-lg .navbar-nav .nav-link:hover {
 	margin: 0;
 }
 
-.pages-banner.contact {
-	min-height: 300px;
+.pages-banner.with-title {
+	min-height: 425px;
 }
 
-.pages-banner.with-title {
-	min-height: 725px;
+.pages-banner.with-title img {
+	max-height: 335px;
 }
 
 @media screen and (max-width: 991px) {
 	.pages-banner {
-		min-height: 455px;
+		min-height: 300px;
 	}
 	.pages-banner .title-banner {
 		margin-bottom: 15px;

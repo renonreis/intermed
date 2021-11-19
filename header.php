@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	
+
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/favicon/favicon-16x16.png">
@@ -37,16 +37,16 @@
 
 	<header id="masthead" class="site-header">
 		<nav class="navbar fixed-top">
-			<div class="container-fluid justify-content-center">			
+			<div class="container-fluid justify-content-center">
 
 				<div class="row align-items-center menu-header">
-					
+
 					<div class="col-9 col-xl-3">
 						<a href="<?php echo get_site_url(); ?>" class="custom-logo-link">
-							<?php get_template_part( 'template-parts/svg/logo' ); ?>
+							<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/logo-nova.png" alt="Intermed Saúde" />
 						</a>
 					</div>
-					
+
 					<div class="col d-none d-xl-block">
 						<?php
 							wp_nav_menu( array(
@@ -62,7 +62,7 @@
 						?>
 					</div>
 
-					<div class="col-3 text-end d-xl-none">	
+					<div class="col-3 text-end d-xl-none">
 						<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 							<?php get_template_part('template-parts/svg/menu-mobile'); ?>
 						</button>
@@ -92,7 +92,7 @@
 						</div>
 					</div>
 
-					
+
 
 				</div>
 

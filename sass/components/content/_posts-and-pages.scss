@@ -41,6 +41,10 @@
     font-size: 40px;
     font-weight: 700;
   }
+  h4 {
+    color: $black;
+    font-weight: 700;
+  }
   .btn {
     max-width: 350px;
     width: 100%;
@@ -104,6 +108,23 @@
       z-index: 1;
     }
   }
+
+  .app {
+    margin: 50px 0;
+
+    a {
+      text-decoration: none;
+      margin-right: 5px;
+    }
+    img {
+      border-radius: 3px;
+    }
+
+    @media screen and (max-width: 991px) {
+      margin: 0 0 50px;
+    }
+  }
+
   @media screen and (max-width: 991px) {
     background-position: right bottom;
     padding: 5em 0;
@@ -379,15 +400,15 @@
 }
 
 .pages-banner {
-  min-height: 620px;
+  min-height: 300px;
   overflow: hidden;
   position: relative;
   img {
     position: absolute;
-    min-height: 620px;
+    max-height: 300px;
     margin-left: 50%;
     object-fit: cover;
-    object-position: bottom;
+    object-position: top;
     top: 0;
     transform: translateX(-50%);
     width: 100%;
@@ -411,16 +432,15 @@
     }
   }
 
-  &.contact {
-    min-height: 300px;
-  }
-
   &.with-title {
-    min-height: 725px;
+    min-height: 425px;
+    img {
+      max-height: 335px;
+    }
   }
 
   @media screen and (max-width: 991px) {
-    min-height: 455px;
+    min-height: 300px;
     .title-banner {
       margin-bottom: 15px;
       h1 {
